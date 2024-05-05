@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://6bmuwki4o6bd"]
+
+[ext_resource type="Script" path="res://Vista.gd" id="1_0cafm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrb2r"]
+bg_color = Color(0.737255, 0.498039, 0.772549, 1)
+
+[sub_resource type="Theme" id="Theme_e70ry"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 41.0
+grow_horizontal = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_xrb2r")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 41.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="MenuBar" type="MenuBar" parent="VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_e70ry")
+
+[node name="Archivo" type="PopupMenu" parent="VBoxContainer/Panel/MarginContainer/MenuBar"]
+title = "Archivo"
+content_scale_mode = 1
+item_count = 1
+item_0/text = "Guardar"
+item_0/id = 0
+
+[node name="Vista" type="PopupMenu" parent="VBoxContainer/Panel/MarginContainer/MenuBar"]
+title = "Archivo"
+hide_on_checkable_item_selection = false
+item_count = 1
+item_0/text = "Zoom"
+item_0/checkable = 1
+item_0/checked = true
+item_0/id = 0
+script = ExtResource("1_0cafm")
+
+[node name="Editar" type="PopupMenu" parent="VBoxContainer/Panel/MarginContainer/MenuBar"]
+title = "Archivo"
+
+[node name="Ajustes" type="PopupMenu" parent="VBoxContainer/Panel/MarginContainer/MenuBar"]
+title = "Archivo"
