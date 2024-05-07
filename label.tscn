@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://6bmuwki4o6bd"]
 
 [ext_resource type="Script" path="res://Vista.gd" id="1_0cafm"]
-[ext_resource type="Texture2D" uid="uid://dli6mslrsrtf4" path="res://icon.svg" id="2_iovjh"]
-[ext_resource type="Texture2D" uid="uid://b7u3wpqs1gbrf" path="res://Piso_Concreto.svg" id="3_6u8rg"]
+[ext_resource type="Texture2D" uid="uid://byyuyyvi0pvka" path="res://construplanner/Boceto Interfaz_1.jpg" id="2_um2o3"]
+[ext_resource type="Texture2D" uid="uid://bb316e2cl03d" path="res://construplanner/Piso_Concreto(1).png" id="3_kduir"]
 [ext_resource type="Texture2D" uid="uid://dau0ncjdlwlnq" path="res://construplanner/piso_madera.png" id="4_40ulw"]
 [ext_resource type="Texture2D" uid="uid://ce4eh86andig5" path="res://construplanner/piso_ceramica.png" id="5_4k7ng"]
 [ext_resource type="Texture2D" uid="uid://ca2ft5smmh2pb" path="res://construplanner/pared_ladrillo1.png" id="6_gi31r"]
@@ -149,7 +149,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(700, 400)
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("2_iovjh")
+texture = ExtResource("2_um2o3")
 expand_mode = 3
 
 [node name="Panel (B)" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)"]
@@ -167,10 +167,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
-current_tab = 1
 
 [node name="Pisos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="piso concreto" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
@@ -193,7 +191,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/piso concreto/CenterContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_6u8rg")
+texture = ExtResource("3_kduir")
 expand_mode = 5
 stretch_mode = 6
 
@@ -262,6 +260,7 @@ text = "Piso ceramica
 fit_content = true
 
 [node name="Muros" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Muro ladrillo" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros"]
