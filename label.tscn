@@ -14,7 +14,7 @@
 bg_color = Color(0.9, 0.9, 0.9, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrb2r"]
-bg_color = Color(0.393086, 0.393085, 0.393085, 1)
+bg_color = Color(0.901961, 0.901961, 0.901961, 1)
 border_width_bottom = 2
 border_color = Color(0.1, 0.1, 0.1, 1)
 border_blend = true
@@ -167,8 +167,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
+current_tab = 1
 
 [node name="Pisos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="piso concreto" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
@@ -260,43 +262,39 @@ text = "Piso ceramica
 fit_content = true
 
 [node name="Muros" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
-visible = false
 layout_mode = 2
 
-[node name="Panel muro" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros"]
+[node name="Muro ladrillo" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro ladrillo"]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 258.0
 scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(75, 75)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro ladrillo/CenterContainer"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro ladrillo/CenterContainer/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("5_32ki7")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro/CenterContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro ladrillo/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Muro ladrillo"
 fit_content = true
 
-[node name="Panel muro2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros"]
+[node name="Muro de block" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro2"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro de block"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -306,17 +304,17 @@ grow_vertical = 2
 scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(75, 75)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro2/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro de block/CenterContainer"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro2/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro de block/CenterContainer/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("6_66siy")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro2/CenterContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro de block/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Muro block"
 fit_content = true
@@ -389,30 +387,35 @@ layout_mode = 2
 size_flags_horizontal = 8
 theme_override_styles/panel = SubResource("StyleBoxFlat_wje44")
 
-[node name="VFlowContainer" type="VFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VFlowContainer" type="VFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/MarginContainer"]
 layout_mode = 2
-offset_left = 1.0
-offset_right = 400.0
-offset_bottom = 474.0
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/VFlowContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(399, 450)
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/MarginContainer/VFlowContainer"]
+clip_contents = false
 layout_mode = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/VFlowContainer/Panel"]
-layout_mode = 0
-offset_top = 12.0
-offset_right = 399.0
-offset_bottom = 43.0
-text = "		Materiales"
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Materiales..."
 fit_content = true
+autowrap_mode = 0
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/VFlowContainer/Panel"]
-layout_mode = 0
-offset_left = -3.0
-offset_top = 417.0
-offset_right = 90.0
-offset_bottom = 448.0
-text = "	Total:"
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/MarginContainer/VFlowContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Total"
 fit_content = true
+autowrap_mode = 0
