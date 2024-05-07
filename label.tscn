@@ -1,14 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://6bmuwki4o6bd"]
+[gd_scene load_steps=10 format=3 uid="uid://6bmuwki4o6bd"]
 
 [ext_resource type="Script" path="res://Vista.gd" id="1_0cafm"]
 [ext_resource type="Texture2D" uid="uid://dli6mslrsrtf4" path="res://icon.svg" id="2_iovjh"]
+[ext_resource type="Texture2D" uid="uid://b7u3wpqs1gbrf" path="res://Piso_Concreto.svg" id="3_6u8rg"]
 [ext_resource type="Texture2D" uid="uid://48c2dvlg28e" path="res://Iconos/Pisos/Piso_Base.png" id="3_a4aab"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v08ce"]
 bg_color = Color(0.9, 0.9, 0.9, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrb2r"]
-bg_color = Color(0.9, 0.9, 0.9, 1)
+bg_color = Color(0.393086, 0.393085, 0.393085, 1)
 border_width_bottom = 2
 border_color = Color(0.1, 0.1, 0.1, 1)
 border_blend = true
@@ -16,7 +17,7 @@ border_blend = true
 [sub_resource type="Theme" id="Theme_e70ry"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvwcb"]
-bg_color = Color(0.901961, 0.901961, 0.901961, 1)
+bg_color = Color(0.89059, 0.89059, 0.89059, 1)
 border_width_top = 2
 border_color = Color(0.101961, 0.101961, 0.101961, 1)
 border_blend = true
@@ -53,13 +54,13 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer"]
+[node name="Panel (A)" type="Panel" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 41)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_xrb2r")
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/Panel (A)"]
 layout_mode = 0
 offset_right = 254.0
 offset_bottom = 41.0
@@ -68,11 +69,11 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="MenuBar" type="MenuBar" parent="Panel/VBoxContainer/Panel/MarginContainer"]
+[node name="MenuBar" type="MenuBar" parent="Panel/VBoxContainer/Panel (A)/MarginContainer"]
 layout_mode = 2
 theme = SubResource("Theme_e70ry")
 
-[node name="Archivo" type="PopupMenu" parent="Panel/VBoxContainer/Panel/MarginContainer/MenuBar"]
+[node name="Archivo" type="PopupMenu" parent="Panel/VBoxContainer/Panel (A)/MarginContainer/MenuBar"]
 title = "Archivo"
 content_scale_mode = 1
 item_count = 4
@@ -85,7 +86,7 @@ item_2/id = 2
 item_3/text = "Exportar como..."
 item_3/id = 3
 
-[node name="Vista" type="PopupMenu" parent="Panel/VBoxContainer/Panel/MarginContainer/MenuBar"]
+[node name="Vista" type="PopupMenu" parent="Panel/VBoxContainer/Panel (A)/MarginContainer/MenuBar"]
 title = "Archivo"
 hide_on_checkable_item_selection = false
 item_count = 6
@@ -103,7 +104,7 @@ item_5/text = "Zoom -"
 item_5/id = 6
 script = ExtResource("1_0cafm")
 
-[node name="Editar" type="PopupMenu" parent="Panel/VBoxContainer/Panel/MarginContainer/MenuBar"]
+[node name="Editar" type="PopupMenu" parent="Panel/VBoxContainer/Panel (A)/MarginContainer/MenuBar"]
 title = "Archivo"
 item_count = 6
 item_0/text = "Deshacer                                     Ctrl+Z"
@@ -119,7 +120,7 @@ item_4/id = 4
 item_5/text = "Modo edición                              Mayús+Ctrl+F5"
 item_5/id = 5
 
-[node name="Ajustes" type="PopupMenu" parent="Panel/VBoxContainer/Panel/MarginContainer/MenuBar"]
+[node name="Ajustes" type="PopupMenu" parent="Panel/VBoxContainer/Panel (A)/MarginContainer/MenuBar"]
 title = "Archivo"
 item_count = 3
 item_0/text = "Configuración de cuenta"
@@ -134,25 +135,25 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer2 (B y D)" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)"]
 custom_minimum_size = Vector2(700, 400)
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("2_iovjh")
 expand_mode = 3
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="Panel (B)" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)"]
 custom_minimum_size = Vector2(0, 181)
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_styles/panel = SubResource("StyleBoxFlat_pvwcb")
 
-[node name="TabContainer" type="TabContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel"]
+[node name="TabContainer" type="TabContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)"]
 custom_minimum_size = Vector2(0, 181)
 layout_mode = 1
 anchors_preset = 15
@@ -162,14 +163,14 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
 
-[node name="Pisos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer"]
+[node name="Pisos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos"]
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos/Panel"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -179,26 +180,26 @@ grow_vertical = 2
 scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(75, 75)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos/Panel/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/Panel/CenterContainer"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos/Panel/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_a4aab")
+texture = ExtResource("3_6u8rg")
 expand_mode = 5
-stretch_mode = 4
+stretch_mode = 6
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos/Panel/CenterContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Piso 1"
+text = "Piso Concreto"
 fit_content = true
 
-[node name="Panel2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos"]
+[node name="Panel2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos/Panel2"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/Panel2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -208,26 +209,26 @@ grow_vertical = 2
 scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(75, 75)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos/Panel2/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/Panel2/CenterContainer"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos/Panel2/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/Panel2/CenterContainer/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("3_a4aab")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos/Panel2/CenterContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/Panel2/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Piso 2"
 fit_content = true
 
-[node name="Panel3" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos"]
+[node name="Panel3" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos/Panel3"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/Panel3"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -237,37 +238,232 @@ grow_vertical = 2
 scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(75, 75)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos/Panel3/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/Panel3/CenterContainer"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos/Panel3/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/Panel3/CenterContainer/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("3_a4aab")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer/Pisos/Panel3/CenterContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/Panel3/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Piso 3"
 fit_content = true
 
-[node name="Muros" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer"]
+[node name="Muros" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
 visible = false
 layout_mode = 2
 
-[node name="Techos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2/Panel/TabContainer"]
+[node name="Panel muro" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(75, 75)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro/CenterContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro/CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_a4aab")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Muro 1"
+fit_content = true
+
+[node name="Panel muro2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(75, 75)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro2/CenterContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro2/CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_a4aab")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro2/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Muro 2"
+fit_content = true
+
+[node name="Panel muro3" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(75, 75)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro3/CenterContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro3/CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_a4aab")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro3/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Muro 3"
+fit_content = true
+
+[node name="Techos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
 visible = false
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer"]
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(75, 75)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel/CenterContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_a4aab")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Techo 1"
+fit_content = true
+
+[node name="Panel2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(75, 75)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel2/CenterContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel2/CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_a4aab")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel2/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Techo 2"
+fit_content = true
+
+[node name="Panel3" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(75, 75)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel3/CenterContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel3/CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_a4aab")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel3/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Techo 3"
+fit_content = true
+
+[node name="Panel (C)" type="Panel" parent="Panel/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_styles/panel = SubResource("StyleBoxFlat_wje44")
 
-[node name="VFlowContainer" type="VFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel"]
+[node name="VFlowContainer" type="VFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)"]
 layout_mode = 2
-offset_left = -4.0
-offset_right = -4.0
-offset_bottom = 585.0
+offset_left = 1.0
+offset_right = 400.0
+offset_bottom = 474.0
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/VFlowContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(399, 450)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/VFlowContainer/Panel"]
+layout_mode = 0
+offset_top = 12.0
+offset_right = 399.0
+offset_bottom = 43.0
+text = "		Materiales"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/VFlowContainer/Panel"]
+offset_left = -3.0
+offset_top = 417.0
+offset_right = 90.0
+offset_bottom = 448.0
+text = "	Total:"
+fit_content = true
