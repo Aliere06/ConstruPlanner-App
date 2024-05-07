@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm8w5w4o1hddm"
-path="res://.godot/imported/muro_ladrillo.png-1089d8b8e10e825be3d94b5767fa1204.ctex"
+uid="uid://di3kgwl8urejl"
+path="res://.godot/imported/pared_block1.png-5a934e3aa9c4a6252a49105116e029f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://construplanner/muro_ladrillo.png"
-dest_files=["res://.godot/imported/muro_ladrillo.png-1089d8b8e10e825be3d94b5767fa1204.ctex"]
+source_file="res://construplanner/pared_block1.png"
+dest_files=["res://.godot/imported/pared_block1.png-5a934e3aa9c4a6252a49105116e029f1.ctex"]
 
 [params]
 
