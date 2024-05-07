@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqwgj32git2m8"
-path="res://.godot/imported/iconos_estructuras.svg-dcbf122bcdc933ded4c1fb0dd7d30871.ctex"
+uid="uid://dror2yc1jh1rd"
+path="res://.godot/imported/Piso_cerámica.svg-c5c1645212d5b8c31dac88d116551112.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://iconos_estructuras.svg"
-dest_files=["res://.godot/imported/iconos_estructuras.svg-dcbf122bcdc933ded4c1fb0dd7d30871.ctex"]
+source_file="res://construplanner/Piso_cerámica.svg"
+dest_files=["res://.godot/imported/Piso_cerámica.svg-c5c1645212d5b8c31dac88d116551112.ctex"]
 
 [params]
 

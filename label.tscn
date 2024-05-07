@@ -284,7 +284,7 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro/CenterContainer/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("5_32ki7")
-expand_mode = 5
+expand_mode = 4
 stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro/CenterContainer/VBoxContainer"]
@@ -351,7 +351,7 @@ stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Techo lamina/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Techo 1"
+text = "Techo lamina"
 fit_content = true
 
 [node name="Techo Vigueta" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos"]
@@ -380,7 +380,7 @@ stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Techo Vigueta/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Techo 2"
+text = "Techo vigueta"
 fit_content = true
 
 [node name="Panel (C)" type="Panel" parent="Panel/VBoxContainer/HBoxContainer"]
