@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://b7u3wpqs1gbrf" path="res://Piso_Concreto.svg" id="3_6u8rg"]
 [ext_resource type="Texture2D" uid="uid://dau0ncjdlwlnq" path="res://construplanner/piso_madera.png" id="4_40ulw"]
 [ext_resource type="Texture2D" uid="uid://ce4eh86andig5" path="res://construplanner/piso_ceramica.png" id="5_4k7ng"]
-[ext_resource type="Texture2D" uid="uid://cm8w5w4o1hddm" path="res://construplanner/muro_ladrillo.png" id="5_32ki7"]
-[ext_resource type="Texture2D" uid="uid://ceupt7gov3rfn" path="res://construplanner/pared_block.png" id="6_66siy"]
+[ext_resource type="Texture2D" uid="uid://ca2ft5smmh2pb" path="res://construplanner/pared_ladrillo1.png" id="6_gi31r"]
+[ext_resource type="Texture2D" uid="uid://di3kgwl8urejl" path="res://construplanner/pared_block1.png" id="7_fngka"]
 [ext_resource type="Texture2D" uid="uid://xcw443as1gv7" path="res://construplanner/techo_lamina_1.png" id="7_jeajk"]
 [ext_resource type="Texture2D" uid="uid://bt1o8s33mvq5f" path="res://construplanner/techo_vigueta.png" id="9_b0wdg"]
 
@@ -269,9 +269,12 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro ladrillo"]
-layout_mode = 0
-offset_right = 150.0
-offset_bottom = 258.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(75, 75)
 
@@ -279,10 +282,15 @@ pivot_offset = Vector2(75, 75)
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro ladrillo/CenterContainer/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro ladrillo/CenterContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("5_32ki7")
-expand_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro ladrillo/CenterContainer/VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(0, 105)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("6_gi31r")
+expand_mode = 3
 stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro ladrillo/CenterContainer/VBoxContainer"]
@@ -308,15 +316,20 @@ pivot_offset = Vector2(75, 75)
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro de block/CenterContainer/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro de block/CenterContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("6_66siy")
-expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro de block/CenterContainer/VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(0, 105)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("7_fngka")
+expand_mode = 3
 stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro de block/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Muro block"
+text = "Muro de block"
 fit_content = true
 
 [node name="Techos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
