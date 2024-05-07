@@ -3,12 +3,12 @@
 [ext_resource type="Script" path="res://Vista.gd" id="1_0cafm"]
 [ext_resource type="Texture2D" uid="uid://dli6mslrsrtf4" path="res://icon.svg" id="2_iovjh"]
 [ext_resource type="Texture2D" uid="uid://b7u3wpqs1gbrf" path="res://Piso_Concreto.svg" id="3_6u8rg"]
-[ext_resource type="Texture2D" uid="uid://48c2dvlg28e" path="res://Iconos/Pisos/Piso_Base.png" id="3_a4aab"]
 [ext_resource type="Texture2D" uid="uid://dau0ncjdlwlnq" path="res://construplanner/piso_madera.png" id="4_40ulw"]
 [ext_resource type="Texture2D" uid="uid://ce4eh86andig5" path="res://construplanner/piso_ceramica.png" id="5_4k7ng"]
 [ext_resource type="Texture2D" uid="uid://cm8w5w4o1hddm" path="res://construplanner/muro_ladrillo.png" id="5_32ki7"]
 [ext_resource type="Texture2D" uid="uid://ceupt7gov3rfn" path="res://construplanner/pared_block.png" id="6_66siy"]
 [ext_resource type="Texture2D" uid="uid://xcw443as1gv7" path="res://construplanner/techo_lamina_1.png" id="7_jeajk"]
+[ext_resource type="Texture2D" uid="uid://bt1o8s33mvq5f" path="res://construplanner/techo_vigueta.png" id="9_b0wdg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v08ce"]
 bg_color = Color(0.9, 0.9, 0.9, 1)
@@ -321,35 +321,6 @@ layout_mode = 2
 text = "Muro block"
 fit_content = true
 
-[node name="Panel muro3" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro3"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.9)
-pivot_offset = Vector2(75, 75)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro3/CenterContainer"]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro3/CenterContainer/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("3_a4aab")
-expand_mode = 5
-stretch_mode = 4
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Panel muro3/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Muro 3"
-fit_content = true
-
 [node name="Techos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
 visible = false
 layout_mode = 2
@@ -383,11 +354,11 @@ layout_mode = 2
 text = "Techo 1"
 fit_content = true
 
-[node name="Panel2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos"]
+[node name="Techo Vigueta" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel2"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Techo Vigueta"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -397,48 +368,19 @@ grow_vertical = 2
 scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(75, 75)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel2/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Techo Vigueta/CenterContainer"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel2/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Techo Vigueta/CenterContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_a4aab")
+texture = ExtResource("9_b0wdg")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel2/CenterContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Techo Vigueta/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Techo 2"
-fit_content = true
-
-[node name="Panel3" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel3"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.9)
-pivot_offset = Vector2(75, 75)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel3/CenterContainer"]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel3/CenterContainer/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("3_a4aab")
-expand_mode = 5
-stretch_mode = 4
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Panel3/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Techo 3"
 fit_content = true
 
 [node name="Panel (C)" type="Panel" parent="Panel/VBoxContainer/HBoxContainer"]
