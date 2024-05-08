@@ -447,3 +447,6 @@ layout_mode = 2
 
 [node name="Control" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/MarginContainer/VFlowContainer" instance=ExtResource("11_x4n4y")]
 layout_mode = 2
+
+[node name="Control2" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/MarginContainer/VFlowContainer" instance=ExtResource("11_x4n4y")]
+layout_mode = 2

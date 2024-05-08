@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Info_Estructura.gd" id="1_250yt"]
 
 [node name="Control" type="VBoxContainer"]
+custom_minimum_size = Vector2(390, 0)
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 88.0
