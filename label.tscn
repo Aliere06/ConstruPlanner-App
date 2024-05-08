@@ -167,8 +167,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
+current_tab = 2
 
 [node name="Pisos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="piso concreto" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
@@ -197,7 +199,7 @@ stretch_mode = 6
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/piso concreto/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Piso Concreto"
+text = "Piso de concreto"
 fit_content = true
 
 [node name="piso madera" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
@@ -226,7 +228,7 @@ stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/piso madera/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Piso madera"
+text = "Piso de madera"
 fit_content = true
 
 [node name="piso ceramica" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
@@ -255,7 +257,7 @@ stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/piso ceramica/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Piso ceramica
+text = "Piso de ceramica
 "
 fit_content = true
 
@@ -294,7 +296,7 @@ stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro ladrillo/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Muro ladrillo"
+text = "Muro de ladrillo"
 fit_content = true
 
 [node name="Muro de block" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros"]
@@ -332,7 +334,6 @@ text = "Muro de block"
 fit_content = true
 
 [node name="Techos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="Techo lamina" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos"]
@@ -361,7 +362,7 @@ stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Techo lamina/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Techo lamina"
+text = "Techo de lamina"
 fit_content = true
 
 [node name="Techo Vigueta" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos"]
@@ -390,7 +391,7 @@ stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos/Techo Vigueta/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Techo vigueta"
+text = "Techo de vigueta"
 fit_content = true
 
 [node name="Panel (C)" type="Panel" parent="Panel/VBoxContainer/HBoxContainer"]
