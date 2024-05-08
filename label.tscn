@@ -1,14 +1,16 @@
-[gd_scene load_steps=15 format=3 uid="uid://6bmuwki4o6bd"]
+[gd_scene load_steps=17 format=3 uid="uid://6bmuwki4o6bd"]
 
-[ext_resource type="Script" path="res://Vista.gd" id="1_0cafm"]
+[ext_resource type="Script" path="res://label.gd" id="1_i8x55"]
 [ext_resource type="Texture2D" uid="uid://ukxnl6gfnif0" path="res://construplanner/3D ALLI.jpeg" id="2_1rkug"]
-[ext_resource type="Texture2D" path="res://construplanner/Piso_Concreto(1).png" id="3_kduir"]
+[ext_resource type="Texture2D" uid="uid://bc6qgx002bacx" path="res://construplanner/Piso_Concreto(1).png" id="3_kduir"]
+[ext_resource type="Script" path="res://piso concreto.gd" id="3_vnqat"]
 [ext_resource type="Texture2D" uid="uid://dau0ncjdlwlnq" path="res://construplanner/piso_madera.png" id="4_40ulw"]
 [ext_resource type="Texture2D" uid="uid://ce4eh86andig5" path="res://construplanner/piso_ceramica.png" id="5_4k7ng"]
 [ext_resource type="Texture2D" uid="uid://cm8w5w4o1hddm" path="res://construplanner/muro_ladrillo.png" id="6_3082d"]
 [ext_resource type="Texture2D" uid="uid://xcw443as1gv7" path="res://construplanner/techo_lamina_1.png" id="7_jeajk"]
 [ext_resource type="Texture2D" uid="uid://ceupt7gov3rfn" path="res://construplanner/pared_block.png" id="7_mru0n"]
 [ext_resource type="Texture2D" uid="uid://bt1o8s33mvq5f" path="res://construplanner/techo_vigueta.png" id="9_b0wdg"]
+[ext_resource type="PackedScene" uid="uid://bslbfrr5yrikp" path="res://Info_Estructura.tscn" id="11_x4n4y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v08ce"]
 bg_color = Color(0.9, 0.9, 0.9, 1)
@@ -40,6 +42,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_i8x55")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -107,7 +110,6 @@ item_4/text = "Zoom +"
 item_4/id = 5
 item_5/text = "Zoom -"
 item_5/id = 6
-script = ExtResource("1_0cafm")
 
 [node name="Editar" type="PopupMenu" parent="Panel/VBoxContainer/Panel (A)/MarginContainer/MenuBar"]
 title = "Archivo"
@@ -174,6 +176,7 @@ layout_mode = 2
 [node name="piso concreto" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
+script = ExtResource("3_vnqat")
 
 [node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/piso concreto"]
 layout_mode = 1
@@ -414,20 +417,9 @@ theme_override_constants/margin_bottom = 5
 [node name="VFlowContainer" type="VFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/MarginContainer"]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/MarginContainer/VFlowContainer"]
-clip_contents = false
+[node name="Control" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/MarginContainer/VFlowContainer" instance=ExtResource("11_x4n4y")]
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "Materiales..."
-fit_content = true
-autowrap_mode = 0
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/MarginContainer/VFlowContainer"]
-clip_contents = false
+[node name="Control2" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/MarginContainer/VFlowContainer" instance=ExtResource("11_x4n4y")]
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "Total"
-fit_content = true
-autowrap_mode = 0
