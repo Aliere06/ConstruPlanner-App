@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bslbfrr5yrikp"]
+
+[node name="Control" type="VBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 88.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Encabezado Estructura" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.901961, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "%nombreEstructura (%mtsCuadrados)"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Unidades Material" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+text = "-%unidades %material_1"
+
+[node name="Costo Material" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0.333333, 0.8, 0.239216, 1)
+text = "%costo"
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="Costo Total" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.133333, 0.8, 0, 1)
+text = "%totalCostos"
