@@ -1,13 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://6bmuwki4o6bd"]
+[gd_scene load_steps=16 format=3 uid="uid://6bmuwki4o6bd"]
 
 [ext_resource type="Script" path="res://Vista.gd" id="1_0cafm"]
 [ext_resource type="Texture2D" uid="uid://ukxnl6gfnif0" path="res://construplanner/3D ALLI.jpeg" id="2_1rkug"]
-[ext_resource type="Texture2D" path="res://construplanner/Piso_Concreto(1).png" id="3_kduir"]
+[ext_resource type="Texture2D" uid="uid://bc6qgx002bacx" path="res://construplanner/Piso_Concreto(1).png" id="3_kduir"]
 [ext_resource type="Texture2D" uid="uid://dau0ncjdlwlnq" path="res://construplanner/piso_madera.png" id="4_40ulw"]
 [ext_resource type="Texture2D" uid="uid://ce4eh86andig5" path="res://construplanner/piso_ceramica.png" id="5_4k7ng"]
-[ext_resource type="Texture2D" uid="uid://cm8w5w4o1hddm" path="res://construplanner/muro_ladrillo.png" id="6_3082d"]
+[ext_resource type="Script" path="res://MiBoton.gd" id="5_vxhr6"]
+[ext_resource type="Texture2D" path="res://construplanner/muro_ladrillo.png" id="6_3082d"]
 [ext_resource type="Texture2D" uid="uid://xcw443as1gv7" path="res://construplanner/techo_lamina_1.png" id="7_jeajk"]
-[ext_resource type="Texture2D" uid="uid://ceupt7gov3rfn" path="res://construplanner/pared_block.png" id="7_mru0n"]
+[ext_resource type="Texture2D" path="res://construplanner/pared_block.png" id="7_mru0n"]
 [ext_resource type="Texture2D" uid="uid://bt1o8s33mvq5f" path="res://construplanner/techo_vigueta.png" id="9_b0wdg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v08ce"]
@@ -200,6 +201,15 @@ layout_mode = 2
 text = "Piso de concreto"
 fit_content = true
 
+[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/piso concreto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
 [node name="piso madera" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
@@ -228,6 +238,16 @@ stretch_mode = 4
 layout_mode = 2
 text = "Piso de madera"
 fit_content = true
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/piso madera"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("5_vxhr6")
 
 [node name="piso ceramica" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
 custom_minimum_size = Vector2(150, 150)
@@ -258,6 +278,16 @@ layout_mode = 2
 text = "Piso de ceramica
 "
 fit_content = true
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/piso ceramica"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("5_vxhr6")
 
 [node name="Muros" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
 visible = false
