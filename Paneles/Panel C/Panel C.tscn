@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5pj1aoda03ih"]
+
+[ext_resource type="Script" path="res://PanelC.gd" id="1_achot"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ty16a"]
+bg_color = Color(0.901961, 0.901961, 0.901961, 1)
+border_width_left = 2
+border_color = Color(0.101961, 0.101961, 0.101961, 1)
+border_blend = true
+
+[node name="Panel (C)" type="Panel"]
+custom_minimum_size = Vector2(400, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_ty16a")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+script = ExtResource("1_achot")

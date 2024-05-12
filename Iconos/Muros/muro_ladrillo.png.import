@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dau0ncjdlwlnq"
-path="res://.godot/imported/piso_madera.png-e64027675d84f8eaee1ce3869c997958.ctex"
+uid="uid://cm8w5w4o1hddm"
+path="res://.godot/imported/muro_ladrillo.png-4cf5779194736f505485942a0d00a461.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://construplanner/piso_madera.png"
-dest_files=["res://.godot/imported/piso_madera.png-e64027675d84f8eaee1ce3869c997958.ctex"]
+source_file="res://Iconos/Muros/muro_ladrillo.png"
+dest_files=["res://.godot/imported/muro_ladrillo.png-4cf5779194736f505485942a0d00a461.ctex"]
 
 [params]
 

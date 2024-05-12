@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvmi0qj7bwv4u"
-path="res://.godot/imported/3D Editor.png-ce2f426c997df36d52ec7ff891a5d919.ctex"
+uid="uid://dau0ncjdlwlnq"
+path="res://.godot/imported/piso_madera.png-4cb40c470f244302a4e5b9630296e390.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://3D Editor.png"
-dest_files=["res://.godot/imported/3D Editor.png-ce2f426c997df36d52ec7ff891a5d919.ctex"]
+source_file="res://Iconos/Pisos/piso_madera.png"
+dest_files=["res://.godot/imported/piso_madera.png-4cb40c470f244302a4e5b9630296e390.ctex"]
 
 [params]
 
