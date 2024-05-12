@@ -1,17 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://6bmuwki4o6bd"]
+[gd_scene load_steps=12 format=3 uid="uid://6bmuwki4o6bd"]
 
 [ext_resource type="PackedScene" uid="uid://dorfg1klv1wif" path="res://Paneles/Panel A/Panel A.tscn" id="1_0c3il"]
 [ext_resource type="Texture2D" uid="uid://drybmnvdiyehq" path="res://Iconos/Pisos/Piso_Concreto.png" id="2_4h0il"]
 [ext_resource type="PackedScene" uid="uid://cjp6mx8jh6t6q" path="res://Paneles/Panel D/Panel D.tscn" id="2_djqba"]
+[ext_resource type="PackedScene" uid="uid://cruqbqc11iyn3" path="res://Paneles/Panel B/ventana_crear_estructura.tscn" id="3_4v6e3"]
 [ext_resource type="PackedScene" uid="uid://d2x8r7xu58tss" path="res://Paneles/Panel B/boton_estructura.tscn" id="3_g7n03"]
 [ext_resource type="Texture2D" uid="uid://dau0ncjdlwlnq" path="res://Iconos/Pisos/piso_madera.png" id="4_40ulw"]
-[ext_resource type="Script" path="res://Button.gd" id="4_bklq3"]
-[ext_resource type="Script" path="res://MiBoton.gd" id="5_vxhr6"]
+[ext_resource type="Script" path="res://Paneles/Panel B/ventana_crear_estructura.gd" id="4_pv0fi"]
 [ext_resource type="Texture2D" uid="uid://dwrypk0bm3tq1" path="res://Iconos/Pisos/Piso_Azulejo.png" id="6_8mnki"]
-[ext_resource type="Texture2D" uid="uid://cm8w5w4o1hddm" path="res://Iconos/Muros/muro_ladrillo.png" id="6_3082d"]
-[ext_resource type="Texture2D" uid="uid://xcw443as1gv7" path="res://Iconos/Techos/Techo_Lamina.png" id="7_jeajk"]
-[ext_resource type="Texture2D" uid="uid://ceupt7gov3rfn" path="res://Iconos/Muros/muro_block.png" id="7_mru0n"]
-[ext_resource type="Texture2D" uid="uid://bt1o8s33mvq5f" path="res://Iconos/Techos/Techo_Vigueta.png" id="9_b0wdg"]
 [ext_resource type="PackedScene" uid="uid://c5pj1aoda03ih" path="res://Paneles/Panel C/Panel C.tscn" id="12_pkbby"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v08ce"]
@@ -71,6 +67,10 @@ layout_mode = 2
 size_flags_vertical = 8
 theme_override_styles/panel = SubResource("StyleBoxFlat_pvwcb")
 
+[node name="PopupPanel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B" instance=ExtResource("3_4v6e3")]
+visible = false
+script = ExtResource("4_pv0fi")
+
 [node name="TabContainer" type="TabContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B"]
 custom_minimum_size = Vector2(0, 181)
 layout_mode = 1
@@ -88,22 +88,19 @@ layout_mode = 2
 layout_mode = 2
 text = "Piso de concreto"
 texture = ExtResource("2_4h0il")
-
-[node name="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer/Pisos/Boton Estructura/CenterContainer/VBoxContainer" index="0"]
-texture = ExtResource("2_4h0il")
-
-[node name="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer/Pisos/Boton Estructura/CenterContainer/VBoxContainer" index="1"]
-text = "Piso de concreto"
+costo_mt2 = 25.5
 
 [node name="Boton Estructura2" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer/Pisos" instance=ExtResource("3_g7n03")]
 layout_mode = 2
 text = "Piso de madera"
 texture = ExtResource("4_40ulw")
+costo_mt2 = 42.0
 
 [node name="Boton Estructura3" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer/Pisos" instance=ExtResource("3_g7n03")]
 layout_mode = 2
 text = "Piso de azulejo"
 texture = ExtResource("6_8mnki")
+costo_mt2 = 35.5
 
 [node name="Muros" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer"]
 visible = false
@@ -113,312 +110,11 @@ layout_mode = 2
 visible = false
 layout_mode = 2
 
-[node name="Panel (B)2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)"]
-custom_minimum_size = Vector2(0, 181)
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_styles/panel = SubResource("StyleBoxFlat_pvwcb")
-
-[node name="TabContainer" type="TabContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2"]
-custom_minimum_size = Vector2(0, 181)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 8
-
-[node name="Pisos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer"]
-layout_mode = 2
-
-[node name="piso concreto" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso concreto"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.9)
-pivot_offset = Vector2(75, 75)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso concreto/CenterContainer"]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso concreto/CenterContainer/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_4h0il")
-expand_mode = 5
-stretch_mode = 6
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso concreto/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Piso de concreto"
-fit_content = true
-
-[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso concreto/CenterContainer"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-flat = true
-script = ExtResource("4_bklq3")
-
-[node name="piso madera" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso madera"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.9)
-pivot_offset = Vector2(75, 75)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso madera/CenterContainer"]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso madera/CenterContainer/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("4_40ulw")
-expand_mode = 5
-stretch_mode = 4
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso madera/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Piso de madera"
-fit_content = true
-
-[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso madera"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-script = ExtResource("5_vxhr6")
-
-[node name="piso azulejo" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso azulejo"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.9)
-pivot_offset = Vector2(75, 75)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso azulejo/CenterContainer"]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso azulejo/CenterContainer/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("6_8mnki")
-expand_mode = 5
-stretch_mode = 4
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso azulejo/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Piso de azulejo"
-fit_content = true
-
-[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Pisos/piso azulejo"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-script = ExtResource("5_vxhr6")
-
-[node name="Muros" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer"]
-visible = false
-layout_mode = 2
-
-[node name="Muro ladrillo" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros/Muro ladrillo"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.9)
-pivot_offset = Vector2(75, 75)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros/Muro ladrillo/CenterContainer"]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros/Muro ladrillo/CenterContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros/Muro ladrillo/CenterContainer/VBoxContainer/CenterContainer"]
-custom_minimum_size = Vector2(0, 105)
-layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("6_3082d")
-expand_mode = 3
-stretch_mode = 4
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros/Muro ladrillo/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Muro de ladrillo"
-fit_content = true
-
-[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros/Muro ladrillo"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-
-[node name="Muro de block" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros/Muro de block"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.9)
-pivot_offset = Vector2(75, 75)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros/Muro de block/CenterContainer"]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros/Muro de block/CenterContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros/Muro de block/CenterContainer/VBoxContainer/CenterContainer"]
-custom_minimum_size = Vector2(0, 105)
-layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("7_mru0n")
-expand_mode = 3
-stretch_mode = 4
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros/Muro de block/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Muro de block"
-fit_content = true
-
-[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Muros/Muro de block"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-
-[node name="Techos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer"]
-visible = false
-layout_mode = 2
-
-[node name="Techo lamina" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Techos"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Techos/Techo lamina"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.9)
-pivot_offset = Vector2(75, 75)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Techos/Techo lamina/CenterContainer"]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Techos/Techo lamina/CenterContainer/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("7_jeajk")
-expand_mode = 5
-stretch_mode = 4
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Techos/Techo lamina/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Techo de lamina"
-fit_content = true
-
-[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Techos/Techo lamina"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-
-[node name="Techo Vigueta" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Techos"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Techos/Techo Vigueta"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.9)
-pivot_offset = Vector2(75, 75)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Techos/Techo Vigueta/CenterContainer"]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Techos/Techo Vigueta/CenterContainer/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("9_b0wdg")
-expand_mode = 5
-stretch_mode = 4
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Techos/Techo Vigueta/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Techo de vigueta"
-fit_content = true
-
-[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)2/TabContainer/Techos/Techo Vigueta"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-
 [node name="Panel C" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("12_pkbby")]
 layout_mode = 2
 
-[connection signal="btn_Estructura" from="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer/Pisos/Boton Estructura/CenterContainer/Button" to="Panel/VBoxContainer/HBoxContainer/Panel C/MarginContainer2/ScrollContainer/VBoxContainer" method="_on_button_btn_estructura"]
+[connection signal="btn_estructura" from="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer/Pisos/Boton Estructura" to="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/PopupPanel" method="_on_boton_estructura_btn_estructura"]
+[connection signal="btn_estructura" from="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer/Pisos/Boton Estructura2" to="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/PopupPanel" method="_on_boton_estructura_btn_estructura"]
+[connection signal="btn_estructura" from="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer/Pisos/Boton Estructura3" to="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/PopupPanel" method="_on_boton_estructura_btn_estructura"]
 
-[editable path="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer/Pisos/Boton Estructura"]
 [editable path="Panel/VBoxContainer/HBoxContainer/Panel C"]

@@ -1,7 +1,5 @@
 [gd_scene load_steps=4 format=3 uid="uid://dorfg1klv1wif"]
 
-[ext_resource type="Script" path="res://Vista.gd" id="1_vbvl5"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_silaq"]
 bg_color = Color(0.901961, 0.901961, 0.901961, 1)
 border_width_bottom = 2
@@ -9,6 +7,20 @@ border_color = Color(0.1, 0.1, 0.1, 1)
 border_blend = true
 
 [sub_resource type="Theme" id="Theme_c20va"]
+
+[sub_resource type="GDScript" id="GDScript_srxll"]
+script/source = "extends PopupMenu
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [node name="Panel A" type="Panel"]
 custom_minimum_size = Vector2(0, 50)
@@ -61,7 +73,7 @@ item_4/text = "Zoom +"
 item_4/id = 5
 item_5/text = "Zoom -"
 item_5/id = 6
-script = ExtResource("1_vbvl5")
+script = SubResource("GDScript_srxll")
 
 [node name="Editar" type="PopupMenu" parent="MarginContainer/MenuBar"]
 title = "Archivo"

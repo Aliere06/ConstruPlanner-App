@@ -10,5 +10,4 @@ func _process(delta):
 	pass
 
 func _on_button_btn_estructura(boton):
-	print(boton.name)
 	add_child(info_Estructura.instantiate())
