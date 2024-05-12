@@ -6,11 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://dau0ncjdlwlnq" path="res://construplanner/piso_madera.png" id="4_40ulw"]
 [ext_resource type="Texture2D" uid="uid://ce4eh86andig5" path="res://construplanner/piso_ceramica.png" id="5_4k7ng"]
 [ext_resource type="Script" path="res://MiBoton.gd" id="5_vxhr6"]
-[ext_resource type="Texture2D" path="res://construplanner/muro_ladrillo.png" id="6_3082d"]
+[ext_resource type="Texture2D" uid="uid://cm8w5w4o1hddm" path="res://construplanner/muro_ladrillo.png" id="6_3082d"]
 [ext_resource type="Texture2D" uid="uid://xcw443as1gv7" path="res://construplanner/techo_lamina_1.png" id="7_jeajk"]
-[ext_resource type="Texture2D" path="res://construplanner/pared_block.png" id="7_mru0n"]
+[ext_resource type="Texture2D" uid="uid://ceupt7gov3rfn" path="res://construplanner/pared_block.png" id="7_mru0n"]
 [ext_resource type="Texture2D" uid="uid://bt1o8s33mvq5f" path="res://construplanner/techo_vigueta.png" id="9_b0wdg"]
-[ext_resource type="PackedScene" path="res://Info_Estructura.tscn" id="11_x4n4y"]
+[ext_resource type="PackedScene" uid="uid://bslbfrr5yrikp" path="res://Info_Estructura.tscn" id="11_x4n4y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v08ce"]
 bg_color = Color(0.9, 0.9, 0.9, 1)
