@@ -1,12 +1,11 @@
-extends Panel
+extends Button
 
-signal btn_Concreto
+signal btn_Estructura(boton)
 
 func _gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			print(get_parent().name + ": I've been clicked D:")
-			emit_signal("btn_Concreto")
+			emit_signal("btn_Estructura", self)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://dorfg1klv1wif"]
+
+[ext_resource type="Script" path="res://Vista.gd" id="1_vbvl5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_silaq"]
+bg_color = Color(0.901961, 0.901961, 0.901961, 1)
+border_width_bottom = 2
+border_color = Color(0.1, 0.1, 0.1, 1)
+border_blend = true
+
+[sub_resource type="Theme" id="Theme_c20va"]
+
+[node name="Panel A" type="Panel"]
+custom_minimum_size = Vector2(0, 50)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_silaq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 312.0
+offset_bottom = 48.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="MenuBar" type="MenuBar" parent="MarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_c20va")
+theme_override_font_sizes/font_size = 22
+
+[node name="Archivo" type="PopupMenu" parent="MarginContainer/MenuBar"]
+title = "Archivo"
+content_scale_mode = 1
+item_count = 4
+item_0/text = "Guardar                                   Ctrl+G"
+item_0/id = 0
+item_1/text = "Abrir                                         Ctrl+O"
+item_1/id = 1
+item_2/text = "Cerrar                                      Alt+F4"
+item_2/id = 2
+item_3/text = "Exportar como..."
+item_3/id = 3
+
+[node name="Vista" type="PopupMenu" parent="MarginContainer/MenuBar"]
+title = "Archivo"
+hide_on_checkable_item_selection = false
+item_count = 6
+item_0/text = "Mostrat Cambios"
+item_0/id = 0
+item_1/text = "Barra de herramientas"
+item_1/id = 1
+item_2/text = "Retíula y líneas guía"
+item_2/id = 2
+item_3/text = "Lista de comando"
+item_3/id = 4
+item_4/text = "Zoom +"
+item_4/id = 5
+item_5/text = "Zoom -"
+item_5/id = 6
+script = ExtResource("1_vbvl5")
+
+[node name="Editar" type="PopupMenu" parent="MarginContainer/MenuBar"]
+title = "Archivo"
+item_count = 6
+item_0/text = "Deshacer                                     Ctrl+Z"
+item_0/id = 0
+item_1/text = "Rehacer                                       Ctrl+Y"
+item_1/id = 1
+item_2/text = "Cortar                                           Ctrl+X"
+item_2/id = 2
+item_3/text = "Pegar                                            Ctrl+V"
+item_3/id = 3
+item_4/text = "Seleccionar todo                        Ctrl+A"
+item_4/id = 4
+item_5/text = "Modo edición                              Mayús+Ctrl+F5"
+item_5/id = 5
+
+[node name="Ajustes" type="PopupMenu" parent="MarginContainer/MenuBar"]
+title = "Archivo"
+item_count = 3
+item_0/text = "Configuración de cuenta"
+item_0/id = 0
+item_1/text = "Preferencias de idioma"
+item_1/id = 1
+item_2/text = "Ayuda"
+item_2/id = 2

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt1o8s33mvq5f"
-path="res://.godot/imported/techo_vigueta.png-e22efb992072f019f5b2b362faacaa32.ctex"
+uid="uid://btco2jiwdepu4"
+path="res://.godot/imported/Boceto editor 3D.svg-753591badc4ec0b7267d5a326c049234.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://construplanner/techo_vigueta.png"
-dest_files=["res://.godot/imported/techo_vigueta.png-e22efb992072f019f5b2b362faacaa32.ctex"]
+source_file="res://Documentos/Boceto editor 3D.svg"
+dest_files=["res://.godot/imported/Boceto editor 3D.svg-753591badc4ec0b7267d5a326c049234.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
