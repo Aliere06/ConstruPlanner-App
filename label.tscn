@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://6bmuwki4o6bd"]
+[gd_scene load_steps=17 format=3 uid="uid://6bmuwki4o6bd"]
 
 [ext_resource type="Texture2D" uid="uid://wvo6freiptyf" path="res://construplanner/Piso_Concreto(1).png" id="1_nlb35"]
 [ext_resource type="Texture2D" uid="uid://cgxvnlj1eprfx" path="res://construplanner/3D ALLI.jpeg" id="1_tkvxg"]
+[ext_resource type="Script" path="res://Button.gd" id="3_jeajc"]
 [ext_resource type="Texture2D" uid="uid://dau0ncjdlwlnq" path="res://Iconos/Pisos/piso_madera.png" id="4_40ulw"]
 [ext_resource type="Texture2D" uid="uid://82giks72030l" path="res://construplanner/piso_ceramica.png" id="4_ced4n"]
 [ext_resource type="Script" path="res://MiBoton.gd" id="5_vxhr6"]
@@ -208,6 +209,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
+script = ExtResource("3_jeajc")
 
 [node name="piso madera" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
 custom_minimum_size = Vector2(150, 150)
@@ -248,6 +250,16 @@ grow_vertical = 2
 flat = true
 script = ExtResource("5_vxhr6")
 
+[node name="Button2" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/piso madera"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("3_jeajc")
+
 [node name="piso ceramica" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
@@ -286,7 +298,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("5_vxhr6")
+script = ExtResource("3_jeajc")
 
 [node name="Muros" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
 visible = false
@@ -326,7 +338,7 @@ layout_mode = 2
 text = "Muro de ladrillo"
 fit_content = true
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro ladrillo"]
+[node name="Button2" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros/Muro ladrillo"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -334,6 +346,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
+script = ExtResource("3_jeajc")
 
 [node name="Muro de block" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Muros"]
 custom_minimum_size = Vector2(150, 150)
@@ -377,6 +390,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
+script = ExtResource("3_jeajc")
 
 [node name="Techos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
 visible = false
@@ -419,6 +433,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
+script = ExtResource("3_jeajc")
 
 [node name="Techo Vigueta" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Techos"]
 custom_minimum_size = Vector2(150, 150)
@@ -457,6 +472,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
+script = ExtResource("3_jeajc")
 
 [node name="Panel (C)" type="Panel" parent="Panel/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
