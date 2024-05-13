@@ -13,23 +13,9 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v08ce"]
 bg_color = Color(0.9, 0.9, 0.9, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrb2r"]
-bg_color = Color(0.901961, 0.901961, 0.901961, 1)
-border_width_bottom = 2
-border_color = Color(0.1, 0.1, 0.1, 1)
-border_blend = true
-
-[sub_resource type="Theme" id="Theme_e70ry"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvwcb"]
 bg_color = Color(0.89059, 0.89059, 0.89059, 1)
 border_width_top = 2
-border_color = Color(0.101961, 0.101961, 0.101961, 1)
-border_blend = true
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wje44"]
-bg_color = Color(0.901961, 0.901961, 0.901961, 1)
-border_width_left = 2
 border_color = Color(0.101961, 0.101961, 0.101961, 1)
 border_blend = true
 
@@ -59,81 +45,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="Panel (A)" type="Panel" parent="Panel/VBoxContainer"]
-custom_minimum_size = Vector2(0, 41)
+[node name="Panel A" parent="Panel/VBoxContainer" instance=ExtResource("1_0c3il")]
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_xrb2r")
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/Panel (A)"]
-layout_mode = 0
-offset_right = 254.0
-offset_bottom = 41.0
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="MenuBar" type="MenuBar" parent="Panel/VBoxContainer/Panel (A)/MarginContainer"]
-layout_mode = 2
-theme = SubResource("Theme_e70ry")
-
-[node name="Archivo" type="PopupMenu" parent="Panel/VBoxContainer/Panel (A)/MarginContainer/MenuBar"]
-title = "Archivo"
-content_scale_mode = 1
-item_count = 4
-item_0/text = "Guardar                                   Ctrl+G"
-item_0/id = 0
-item_1/text = "Abrir                                         Ctrl+O"
-item_1/id = 1
-item_2/text = "Cerrar                                      Alt+F4"
-item_2/id = 2
-item_3/text = "Exportar como..."
-item_3/id = 3
-
-[node name="Vista" type="PopupMenu" parent="Panel/VBoxContainer/Panel (A)/MarginContainer/MenuBar"]
-title = "Archivo"
-hide_on_checkable_item_selection = false
-item_count = 6
-item_0/text = "Mostrat Cambios"
-item_0/id = 0
-item_1/text = "Barra de herramientas"
-item_1/id = 1
-item_2/text = "Retíula y líneas guía"
-item_2/id = 2
-item_3/text = "Lista de comando"
-item_3/id = 4
-item_4/text = "Zoom +"
-item_4/id = 5
-item_5/text = "Zoom -"
-item_5/id = 6
-script = ExtResource("1_0cafm")
-
-[node name="Editar" type="PopupMenu" parent="Panel/VBoxContainer/Panel (A)/MarginContainer/MenuBar"]
-title = "Archivo"
-item_count = 6
-item_0/text = "Deshacer                                     Ctrl+Z"
-item_0/id = 0
-item_1/text = "Rehacer                                       Ctrl+Y"
-item_1/id = 1
-item_2/text = "Cortar                                           Ctrl+X"
-item_2/id = 2
-item_3/text = "Pegar                                            Ctrl+V"
-item_3/id = 3
-item_4/text = "Seleccionar todo                        Ctrl+A"
-item_4/id = 4
-item_5/text = "Modo edición                              Mayús+Ctrl+F5"
-item_5/id = 5
-
-[node name="Ajustes" type="PopupMenu" parent="Panel/VBoxContainer/Panel (A)/MarginContainer/MenuBar"]
-title = "Archivo"
-item_count = 3
-item_0/text = "Configuración de cuenta"
-item_0/id = 0
-item_1/text = "Preferencias de idioma"
-item_1/id = 1
-item_2/text = "Ayuda"
-item_2/id = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -145,14 +58,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)"]
-custom_minimum_size = Vector2(700, 400)
+[node name="Panel D" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)" instance=ExtResource("2_djqba")]
 layout_mode = 2
-size_flags_vertical = 3
-texture = ExtResource("2_1rkug")
-expand_mode = 3
 
-[node name="Panel (B)" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)"]
+[node name="Panel B" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)"]
 custom_minimum_size = Vector2(0, 181)
 layout_mode = 2
 size_flags_vertical = 8
@@ -172,7 +81,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
 
-[node name="Pisos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer"]
+[node name="Pisos" type="HFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer"]
 layout_mode = 2
 
 [node name="Boton Estructura" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer/Pisos" instance=ExtResource("3_g7n03")]
@@ -201,25 +110,7 @@ layout_mode = 2
 visible = false
 layout_mode = 2
 
-[node name="Panel (C)" type="Panel" parent="Panel/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(400, 0)
-layout_mode = 2
-size_flags_horizontal = 8
-theme_override_styles/panel = SubResource("StyleBoxFlat_wje44")
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="VFlowContainer" type="VFlowContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel (C)/MarginContainer"]
+[node name="Panel C" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("12_pkbby")]
 layout_mode = 2
 
 [connection signal="btn_estructura" from="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/TabContainer/Pisos/Boton Estructura" to="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel B/PopupPanel" method="_on_boton_estructura_btn_estructura"]
