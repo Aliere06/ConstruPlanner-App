@@ -1,6 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://6bmuwki4o6bd"]
+[gd_scene load_steps=16 format=3 uid="uid://6bmuwki4o6bd"]
 
+[ext_resource type="Texture2D" uid="uid://wvo6freiptyf" path="res://construplanner/Piso_Concreto(1).png" id="1_nlb35"]
+[ext_resource type="Texture2D" uid="uid://cgxvnlj1eprfx" path="res://construplanner/3D ALLI.jpeg" id="1_tkvxg"]
 [ext_resource type="Texture2D" uid="uid://dau0ncjdlwlnq" path="res://Iconos/Pisos/piso_madera.png" id="4_40ulw"]
+[ext_resource type="Texture2D" uid="uid://82giks72030l" path="res://construplanner/piso_ceramica.png" id="4_ced4n"]
 [ext_resource type="Script" path="res://MiBoton.gd" id="5_vxhr6"]
 [ext_resource type="Texture2D" uid="uid://cm8w5w4o1hddm" path="res://Iconos/Muros/muro_ladrillo.png" id="6_3082d"]
 [ext_resource type="Texture2D" uid="uid://xcw443as1gv7" path="res://Iconos/Techos/Techo_Lamina.png" id="7_jeajk"]
@@ -146,6 +149,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(700, 400)
 layout_mode = 2
 size_flags_vertical = 3
+texture = ExtResource("1_tkvxg")
 expand_mode = 3
 
 [node name="Panel (B)" type="Panel" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)"]
@@ -187,6 +191,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/piso concreto/CenterContainer/VBoxContainer"]
 layout_mode = 2
+texture = ExtResource("1_nlb35")
 expand_mode = 5
 stretch_mode = 6
 
@@ -263,6 +268,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2 (B y D)/Panel (B)/TabContainer/Pisos/piso ceramica/CenterContainer/VBoxContainer"]
 layout_mode = 2
+texture = ExtResource("4_ced4n")
 expand_mode = 5
 stretch_mode = 4
 
